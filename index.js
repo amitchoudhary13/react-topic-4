@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import {Details} from './details.js';
 import './style.css';
+import {Header} from './header';
 
-export class App extends Component {
+
+export class Main extends Component {
   constructor() {
     super();
     this.state = {
       
-  objEmployee:[
-    {name:"Magesh Babu",role:"Trainer",location:"Chennai"},
-    {name:"Nithya Priya",role:"Gynacologist",location:"Sydeny"},
-    {name:"Panneer Selvam",role:"Architect",location:"Chennai"},
-    {name:"Rajagopalan",role:"VP",location:"Kochi"},
-    {name:"Siva",role:"Project Manager",location:"Chennai"},
-    {name:"Taj",role:"Enterepranur",location:"Villupuram"},
-    {name:"Usha",role:"Home Maker",location:"Chennai"},
-    {name:"Vijay",role:"GM",location:"Chennai"},
+  objStudent:[
+    {ID: "1",Name: "Senpai",Gender: "1",Class: "12"},
+    {ID: "2",Name: "Panneer",Gender: "1",Class: "12"},
+    {ID: "3",Name: "Rajagopalan",Gender: "1",Class: "12"},
+    {ID: "4",Name: "Siva",Gender: "1",Class: "12"},
+    {ID: "5",Name: "Taj",Gender: "1",Class: "12"},
+    {ID: "6",Name: "Usha",Gender: "1",Class: "12"},
+    {ID: "7",Name: "Vijay",Gender: "1",Class: "12"},
 ]
     };
   }
 
   render() {
     return (
-     <Details/>
+        <React.Fragment>
+         <Header/>
+        </React.Fragment>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<Main />, document.getElementById('root'));
